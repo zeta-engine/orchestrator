@@ -4,3 +4,4 @@
       path: ./rabbitmq.yaml
   - applyApiGateway:
       path: ./api-gateway.yaml
+
