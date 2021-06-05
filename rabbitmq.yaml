@@ -21,8 +21,10 @@ spec:
       - name: rabbitmq
         image: rabbitmq:3-management
         ports:
-        - port: 5672
-        - port: 15672
+        - containerPort: 5672
+          name: rabbit-A
+        - containerPort: 15672
+          name: rabbit-B 
 
 ---
 kind: Service
