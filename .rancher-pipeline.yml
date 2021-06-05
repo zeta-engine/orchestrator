@@ -7,12 +7,20 @@ stages:
     steps:
     - applyYamlConfig:
         path: ./mongo.yaml
-  - name: Deploy Micro Admin Backend
-    steps:
-    - applyYamlConfig:
-        path: ./micro-admin-backend.yaml
   - name: Deploy Api Gateway
     steps:
     - applyYamlConfig:
         path: ./api-gateway.yaml
+  - name: Deploy Micro Admin Backend
+    steps:
+    - applyYamlConfig:
+        path: ./micro-admin-backend.yaml
+  - name: Deploy Micro Challenges
+    steps:
+    - applyYamlConfig:
+        path: ./micro-challenges.yaml
+  - name: Deploy Micro Rankings
+    steps:
+    - applyYamlConfig:
+        path: ./micro-rankings.yaml
 
