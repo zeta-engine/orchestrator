@@ -1,8 +1,10 @@
 stages:
-  - name: Deploy
+  - name: Deploy Rabbit
     steps:
-    - applyRabbit:
+    - applyYamlConfig:
         path: ./rabbitmq.yaml
-    - applyApiGateway:
+  - name: Deploy Rabbit
+    steps:
+    - applyYamlConfig:
         path: ./api-gateway.yaml
 
