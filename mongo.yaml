@@ -25,7 +25,6 @@ spec:
           value: "root"
         - name: MONGO_INITDB_ROOT_PASSWORD
           value: "root"
-    command: ["echo"]
         ports:
         - containerPort: 27017
           name: rabbit27017
