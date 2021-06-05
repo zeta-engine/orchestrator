@@ -3,7 +3,15 @@ stages:
     steps:
     - applyYamlConfig:
         path: ./rabbitmq.yaml
-  - name: Deploy Rabbit
+  - name: Deploy Mongo DB
+    steps:
+    - applyYamlConfig:
+        path: ./mongo.yaml
+  - name: Deploy Micro Admin Backend
+    steps:
+    - applyYamlConfig:
+        path: ./micro-admin-backend.yaml
+  - name: Deploy Api Gateway
     steps:
     - applyYamlConfig:
         path: ./api-gateway.yaml
