@@ -1,7 +1,8 @@
-- name: Deploy Rabbit
-  steps:
-  - applyRabbit:
-      path: ./rabbitmq.yaml
-  - applyApiGateway:
-      path: ./api-gateway.yaml
+stages:
+  - name: Deploy Rabbit
+    steps:
+    - applyRabbit:
+        path: ./rabbitmq.yaml
+    - applyApiGateway:
+        path: ./api-gateway.yaml
 
