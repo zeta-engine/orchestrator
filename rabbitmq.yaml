@@ -22,9 +22,9 @@ spec:
         image: rabbitmq:3-management
         ports:
         - containerPort: 5672
-          name: rabbitA
+          name: rabbit5672
         - containerPort: 15672
-          name: rabbitB 
+          name: rabbit15672 
 
 ---
 kind: Service
@@ -36,9 +36,9 @@ spec:
     app: rabbitmq
   type: ClusterIP
   ports:
-  - name: portA
+  - name: port5672
     port: 5672
     targetPort: 5672
-  - name: portB
+  - name: port15672
     port: 15672
     targetPort: 5672
