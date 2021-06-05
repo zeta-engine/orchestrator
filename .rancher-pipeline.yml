@@ -1,5 +1,5 @@
 stages:
-  - name: Deploy Rabbit
+  - name: Deploy
     steps:
     - applyRabbit:
         path: ./rabbitmq.yaml
